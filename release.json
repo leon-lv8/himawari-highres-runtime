@@ -5,8 +5,8 @@
     "NOTICE.md",
     "release.json"
   ],
-  "image": "ghcr.io/leon-lv8/himawari-highres:4d89cda5eb3e3ed5f5f46c6ab48a4e1c33bae31f",
+  "image": "ghcr.io/leon-lv8/himawari-highres:b5aec80142ab5665ef0eb4f969c5ba9eeb15f068",
   "schemaVersion": 1,
   "sourceRepository": "private GitLab repository",
-  "sourceRevision": "4d89cda5eb3e3ed5f5f46c6ab48a4e1c33bae31f"
+  "sourceRevision": "b5aec80142ab5665ef0eb4f969c5ba9eeb15f068"
 }
