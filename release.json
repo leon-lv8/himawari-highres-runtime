@@ -1,0 +1,12 @@
+{
+  "contents": [
+    ".github/workflows/render.yml",
+    "README.md",
+    "NOTICE.md",
+    "release.json"
+  ],
+  "image": "ghcr.io/leon-lv8/himawari-highres:4d89cda5eb3e3ed5f5f46c6ab48a4e1c33bae31f",
+  "schemaVersion": 1,
+  "sourceRepository": "private GitLab repository",
+  "sourceRevision": "4d89cda5eb3e3ed5f5f46c6ab48a4e1c33bae31f"
+}
