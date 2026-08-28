@@ -29,7 +29,7 @@ jobs:
           username: ${{ secrets.GHCR_PULL_USERNAME }}
           password: ${{ secrets.GHCR_PULL_TOKEN }}
       - name: Pull immutable renderer
-        run: docker pull ghcr.io/leon-lv8/himawari-highres:95f9c1cdc1e9c1f23bc52797a58293a7a1fff3a6
+        run: docker pull ghcr.io/leon-lv8/himawari-highres:78a9ae813854a2b1fe17dda100f007f65152d459
       - name: Render and publish
         env:
           REGION_MODE: full_disk
@@ -69,4 +69,4 @@ jobs:
             -e OPENLIST_S3_SECRET_ACCESS_KEY -e OPENLIST_S3_BUCKET \
             -e OPENLIST_S3_PREFIX -e OSS_RETENTION_DAYS \
             -e OSS_CLEANUP_INTERVAL_HOURS \
-            ghcr.io/leon-lv8/himawari-highres:95f9c1cdc1e9c1f23bc52797a58293a7a1fff3a6
+            ghcr.io/leon-lv8/himawari-highres:78a9ae813854a2b1fe17dda100f007f65152d459
