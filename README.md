@@ -9,7 +9,7 @@ private GitLab repository.
 ## Container
 
 ```text
-ghcr.io/leon-lv8/himawari-highres:d40ff177ecb7203028a6b38f2c9fd0d037bec820
+ghcr.io/leon-lv8/himawari-highres:3250be6f902b7fdf40820282da9c588c777f6b01
 ```
 
 The image reads public NOAA Himawari-9 AHI L1b data and publishes z6/z7
@@ -19,6 +19,8 @@ the full operational configuration.
 
 The package is expected to remain private because its filesystem contains the
 Python renderer. GitHub Actions authenticates with a read-only package token.
+Production runs are dispatched and monitored by the authoritative private
+GitLab repository; this public workflow has no independent schedule.
 The image is not a grant of rights to the private source repository, and all
 bundled third-party components remain subject to their respective licenses and
 attribution requirements.

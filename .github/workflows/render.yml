@@ -1,9 +1,13 @@
 name: Render Himawari
+run-name: Render Himawari / ${{ inputs.request_id || 'manual' }}
 
 on:
-  schedule:
-    - cron: '27 * * * *'
   workflow_dispatch:
+    inputs:
+      request_id:
+        description: GitLab dispatch identifier
+        required: false
+        type: string
 
 concurrency:
   group: himawari-production-render
@@ -25,7 +29,7 @@ jobs:
           username: ${{ secrets.GHCR_PULL_USERNAME }}
           password: ${{ secrets.GHCR_PULL_TOKEN }}
       - name: Pull immutable renderer
-        run: docker pull ghcr.io/leon-lv8/himawari-highres:d40ff177ecb7203028a6b38f2c9fd0d037bec820
+        run: docker pull ghcr.io/leon-lv8/himawari-highres:3250be6f902b7fdf40820282da9c588c777f6b01
       - name: Render and publish
         env:
           REGION_MODE: full_disk
@@ -58,4 +62,4 @@ jobs:
             -e OPENLIST_S3_SECRET_ACCESS_KEY -e OPENLIST_S3_BUCKET \
             -e OPENLIST_S3_PREFIX -e OSS_RETENTION_DAYS \
             -e OSS_CLEANUP_INTERVAL_HOURS \
-            ghcr.io/leon-lv8/himawari-highres:d40ff177ecb7203028a6b38f2c9fd0d037bec820
+            ghcr.io/leon-lv8/himawari-highres:3250be6f902b7fdf40820282da9c588c777f6b01
