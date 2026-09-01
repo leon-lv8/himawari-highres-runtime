@@ -9,7 +9,7 @@ private GitLab repository.
 ## Container
 
 ```text
-ghcr.io/leon-lv8/himawari-highres:7bffeb8ace3d9de8a4c40f25e2bf6e828cc646a9
+ghcr.io/leon-lv8/himawari-highres:2ac2b6251b2368c37f2dfa53215b3fc41ecfbd96
 ```
 
 The image reads public NOAA Himawari-9 AHI L1b data and publishes z6/z7
